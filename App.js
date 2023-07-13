@@ -9,9 +9,11 @@ export default function App() {
     <View style={styles.container}>
       <Video
         onError={console.log}
-        style={{ flex: 1 }}
+        style={{ width: "100%", height: "100%" }}
         shouldPlay={true}
+        isLooping
         useNativeControls
+        resizeMode="cover"
         source={{
           uri: videoUrl,
         }}
@@ -26,5 +28,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
+    height: "100%",
+    width: "100%",
   },
 });
